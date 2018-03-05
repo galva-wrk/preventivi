@@ -1,0 +1,22 @@
+{
+  "name": "preventivi",
+  "version": "1.0.0",
+  "description": "Preventivi studio tecnico",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/galva-wrk/preventivi.git"
+  },
+  "author": "Davide Galvani",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/galva-wrk/preventivi/issues"
+  },
+  "homepage": "https://github.com/galva-wrk/preventivi#readme",
+  "devDependencies": {
+    "electron": "^1.8.2"
+  }
+}
