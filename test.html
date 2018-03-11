@@ -4,28 +4,36 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script>window.$ = window.jQuery = require('/node_modules/jquery/dist/jquery.min.js')</script>
-    <!-- <script>window.$ = window.jQuery = require('./node_modules/jquery/jquery.js')</script> -->
-    <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!-- <script src="/node_modules/jquery/dist/jquery.min.js"></script> -->
-    <script src="/js/preventivi.js">
-
-    </script>
+    <!-- Questa include serve fuori da electron -->
+    <!-- <script src="node_modules/jquery/dist/jquery.min.js"></script> -->
+    <!-- Questa include serve per electron -->
+    <script>window.$ = window.jQuery = require('jquery');</script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/preventivi.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
     <title></title>
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
   </head>
   <body>
-    <h3>Tooltip Example</h3>
-    <a href="#" data-toggle="tooltip" title="Hooray!">Hover over me</a>
-    <!-- <h1>Test applicazione</h1>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div id="giallo">
+            Giallo
+          </div>
+        </div>
+        <div class="col-lg-6" style="backgroundColor:red">
+          <div id="rosso">
+            Rosso
+          </div>
+        </div>
+      </div>
+      <br>
+      <h1>Test applicazione</h1>
+      <button type="button" class="btn btn-primary" name="button">TEST</button>
+    </div>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
   </body>
 </html>
