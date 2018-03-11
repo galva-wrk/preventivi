@@ -1,2 +1,0 @@
-# preventivi
-Preventivi studio tecnico
