@@ -18,12 +18,29 @@
   <body>
     <div class="container">
       <div class="row">
-        <h1>Inserimento</h1>
+        <h4>Inserimento</h4>
         <br>
-        <button type="button" class="btn btn-warning" name="button">TEST</button>
+        <form>
+          <label>Inserisci elemento</label>
+          <input type="text" id="item" autofocus>
+        </form>
+        <button type="submit" class="btn btn-warning">TEST</button>
       </div>
     </div>
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
     <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
+    <script>
+      const electron = require('electron');
+      const {ipcRenderer} = electron;
+
+      const form = document.querySelector('form');
+      form.addEventListener('submit', submitForm);
+      function submitForm(e){
+        e.preventDefault();
+        const item = document.querySelector('#item').value;
+        ipcRenderer.send('item:add', item);
+      }
+
+    </script>
   </body>
 </html>

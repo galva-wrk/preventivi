@@ -31,8 +31,30 @@
       </div>
       <br>
       <h1>Test applicazione</h1>
-      <button type="button" class="btn btn-primary" name="button">TEST</button>
+      <ul>
+
+      </ul>
+      <!-- <button type="button" class="btn btn-primary" name="button">TEST</button> -->
+      <script>
+      const electron = require('electron');
+      const {ipcRenderer} = electron;
+      const ul = document.querySelector('ul');
+
+      // Add item
+      ipcRenderer.on('item:add', function(e, item){
+        const li = document.createElement('li');
+        const itemText = document.createTextNode(item);
+        li.appendChild(itemText);
+        ul.appendChild(li);
+      });
+
+      // Clear item
+      ipcRenderer.on('item:clear', function(){
+        ul.innerHTML = '';
+      });
+      </script>
     </div>
+
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
     <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
   </body>
