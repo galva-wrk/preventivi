@@ -26,7 +26,7 @@ global.sharedObj = {
   version: 1.0,
   licenseType: "MIT",
   copyrightYear: "2018",
-  debug: true,
+  debug: false,
   pathLog: path.join(__dirname, 'log.txt')
 };
 
@@ -718,7 +718,7 @@ function caricaListaPrev(anno, cliente, opera){
 
   // Scrittura dati e arricchimento opere
   for (var i = 0; i < row.length; i++) {
-    
+
     outPrev[i] = {
       numPrev : row[i].numPrev,
       anno : row[i].anno,
@@ -759,12 +759,12 @@ function getOperePrev(numPrev){
 
   logger.info('getOperePrev: ' + sqlOperation + '<');
   var row = db.prepare(sqlOperation).all();
-  
+
   // Scrittura dati e arricchimento opere
   for (var i = 0; i < row.length; i++) {
     var row2 = db.prepare("SELECT descrizione FROM opereDescrPreventivi WHERE idOpera = " + row[i].idOperaKey + " and numPrev = " + numPrev + " ORDER BY progressivo").all();
     let descr = new Array();
-    
+
     for (var y = 0; y < row2.length; y++) {
       let comodo = {descrizione: row2[y].descrizione};
       descr[y] = comodo;
@@ -1040,7 +1040,7 @@ function caricaListaOpere(descrizione){
   logger.info('caricaListaOpere: ' + sqlOperation + '<');
   // outOpere = db.prepare(sqlOperation).all();
   var row = db.prepare(sqlOperation).all();
-  
+
   // Scrittura dati e arricchimento opere
   for (var i = 0; i < row.length; i++) {
 
@@ -1219,11 +1219,11 @@ function insOpera(opera){
     esito.esito = 'KO';
     esito.descErr = 'Errore in inserimento opera';
   }
-  
+
   // inserimento descrizioni
   for (var i = 0; i < opera.descrizioni.length; i++) {
     var sqlOperation = 'INSERT INTO opereDescr (idOpera, progressivo, descrizione) VALUES (?, ?, ?)';
-    
+
     logger.info('insOperaDescr: ' + sqlOperation + '<');
     try {
       var stmt = db.prepare(sqlOperation).run(opera.id, i, opera.descrizioni[i].descrizione);
@@ -1467,11 +1467,11 @@ function insOperaPrev(opera, numPrev, idOperaKey){
     esito.esito = 'KO';
     esito.descErr = 'Errore in inserimento opera del preventivo';
   }
-  
+
   // inserimento descrizioni
   for (var i = 0; i < opera.descrizioni.length; i++) {
     var sqlOperation = 'INSERT INTO opereDescrPreventivi (idOpera, progressivo, descrizione, numPrev) VALUES (?, ?, ?, ?)';
-    
+
     logger.info('insOperaPrev: ' + sqlOperation + '<');
     try {
       var stmt = db.prepare(sqlOperation).run(idOperaKey, i, opera.descrizioni[i].descrizione, numPrev);
@@ -1511,7 +1511,7 @@ function cancOperePrev(numPrev){
     esito.esito = 'KO';
     esito.descErr = 'Errore in cancellazione opere del preventivo';
   }
-  
+
   // Cancellazione descrizioni opere
   var sqlOperation = 'DELETE FROM opereDescrPreventivi WHERE numPrev = ?';
 

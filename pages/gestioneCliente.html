@@ -1,0 +1,208 @@
+﻿<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/styleGestCli.css">
+    <link rel="stylesheet" href="../css/styleGeneral.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css">
+    <script>window.$ = window.jQuery = require('jquery');</script>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <h3 class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">Gestione cliente</h3>
+        <span class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 d-flex justify-content-end align-middle">
+          <div class="align-middle" id="esito">
+            <span id="descEsito"></span>
+          </div>
+        </span>
+      </div>
+      <div class="card" id="nuovoCli">
+        <div class="card-header">Nuovo cliente</div>
+        <div>
+          <div class="card-body">
+            <div class="row">
+              <label class="control-label col-lg-2">Tipo Cliente:</label>
+              <span class="col-lg-2">
+                <span class="btn-group">
+                  <button type="button" class="btn btn-sm btn-success" id="insBtnPriv" onclick="changePrivato('ins')">Privato</button>
+                  <button type="button" class="btn btn-sm btn-default" id="insBtnSoc" onclick="changeSocieta('ins')">Società</button>
+                </span>
+              </span>
+            </div>
+            <form id="inserimento">
+              <div class="row d-flex">
+                <label class="control-label col-lg-2" for="idI">Codice:</label>
+                <span class="col-lg-2">
+                  <span id="idI" class="text-right"></span>
+                </span>
+              </div>
+              <div class="row" id="rowNomeIns">
+                <label class="control-label col-lg-2" for="nomeI">Nome:</label>
+                <span class="col-lg-3">
+                  <input type="text" class="form-control form-control-sm" id="nomeI" maxlength="50"></input>
+                </span>
+              </div>
+              <div class="row" id="rowCognomeIns">
+                <label class="control-label col-lg-2" for="cognomeI">Cognome:</label>
+                <span class="col-lg-3">
+                  <input type="text" class="form-control form-control-sm" id="cognomeI" maxlength="50"></input>
+                </span>
+              </div>
+              <div class="row" id="rowRagSocIns">
+                <label class="control-label col-lg-2" for="ragSocI">Ragione sociale:</label>
+                <span class="col-lg-6">
+                  <input type="text" class="form-control form-control-sm" id="ragSocI" maxlength="100"></input>
+                </span>
+              </div>
+              <div class="row" id="rowCdFisIns">
+                <label class="control-label col-lg-2" for="cdFisI">Codice fiscale:</label>
+                <span class="col-lg-2">
+                  <input type="text" class="form-control form-control-sm" id="cdFisI" maxlength="16"></input>
+                </span>
+              </div>
+              <div class="row" id="rowPIvaIns">
+                <label class="control-label col-lg-2" for="pIvaI">Partita IVA:</label>
+                <span class="col-lg-2">
+                  <input type="text" class="form-control form-control-sm" id="pIvaI" maxlength="11"></input>
+                </span>
+              </div>
+              <div class="row">
+                <label class="control-label col-lg-2" for="indirI">Indirizzo:</label>
+                <span class="col-lg-6">
+                  <input type="text" class="form-control form-control-sm" id="indirI" maxlength="100"></input>
+                </span>
+                <span class="col-lg-1">
+                  <input type="text" class="form-control form-control-sm" id="numCivI" placeholder="Numero civico" maxlength="10"></input>
+                </span>
+              </div>
+              <div class="row">
+                <label class="control-label col-lg-2" for="capI">CAP:</label>
+                <span class="col-lg-1">
+                  <input type="text" class="form-control form-control-sm" id="capI" maxlength="5"></input>
+                </span>
+              </div>
+              <div class="row">
+                <label class="control-label col-lg-2" for="comuneI">Comune:</label>
+                <span class="col-lg-6">
+                  <input type="text" class="form-control form-control-sm" id="comuneI" maxlength="100"></input>
+                </span>
+              </div>
+              <div class="row">
+                <label class="control-label col-lg-2" for="provI">Provincia:</label>
+                <span class="col-lg-1">
+                  <input type="text" class="form-control form-control-sm" id="provI" maxlength="2"></input>
+                </span>
+              </div>
+              <div class="row" id="fillerIns">
+                <label class="control-label" style="color:white">Filler</label>
+              </div>
+              <br>
+              <div class="btn-group float-right bottom-right">
+                <button type="button" class="btn btn-warning" title="salva cliente" id="salvaIns"><i class="fa fa-save"></i></button>
+              </div> 
+              <br>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="card" id="modificaCli">
+        <div class="card-header">Modifica cliente</div>
+        <div id="modifica">
+          <div class="card-body">
+            <div class="row">
+              <label class="control-label col-lg-2">Tipo Cliente:</label>
+              <span class="col-lg-2">
+                <span class="btn-group">
+                  <button type="button" class="btn btn-sm btn-success" id="modBtnPriv" onclick="changePrivato('mod')">Privato</button>
+                  <button type="button" class="btn btn-sm btn-default" id="modBtnSoc" onclick="changeSocieta('mod')">Società</button>
+                </span>
+              </span>
+            </div>
+            <form id="modifica">
+              <div class="row d-flex">
+                <label class="control-label col-lg-2" for="idM">Codice:</label>
+                <span class="col-lg-2">
+                  <span class="text-right" id="idM"></span>
+                </span>
+              </div>
+              <div class="row" id="rowNomeMod">
+                <label class="control-label col-lg-2" for="nomeM">Nome:</label>
+                <span class="col-lg-3">
+                  <input type="text" class="form-control form-control-sm" id="nomeM" maxlength="50"></input>
+                </span>
+              </div>
+              <div class="row" id="rowCognomeMod">
+                <label class="control-label col-lg-2" for="cognomeM">Cognome:</label>
+                <span class="col-lg-3">
+                  <input type="text" class="form-control form-control-sm" id="cognomeM" maxlength="50"></input>
+                </span>
+              </div>
+              <div class="row" id="rowRagSocMod">
+                <label class="control-label col-lg-2" for="ragSocM">Ragione sociale:</label>
+                <span class="col-lg-6">
+                  <input type="text" class="form-control form-control-sm" id="ragSocM" maxlength="100"></input>
+                </span>
+              </div>
+              <div class="row" id="rowCdFisMod">
+                <label class="control-label col-lg-2" for="cdFisM">Codice fiscale:</label>
+                <span class="col-lg-2">
+                  <input type="text" class="form-control form-control-sm" id="cdFisM" maxlength="16"></input>
+                </span>
+              </div>
+              <div class="row" id="rowPIvaMod">
+                <label class="control-label col-lg-2" for="pIvaM">Partita IVA:</label>
+                <span class="col-lg-2">
+                  <input type="text" class="form-control form-control-sm" id="pIvaM" maxlength="11"></input>
+                </span>
+              </div>
+              <div class="row">
+                <label class="control-label col-lg-2" for="indirM">Indirizzo:</label>
+                <span class="col-lg-6">
+                  <input type="text" class="form-control form-control-sm" id="indirM" maxlength="50"></input>
+                </span>
+                <span class="col-lg-1">
+                  <input type="text" class="form-control form-control-sm" id="numCivM" placeholder="Numero civico" maxlength="10"></input>
+                </span>
+              </div>
+              <div class="row">
+                <label class="control-label col-lg-2" for="capM">CAP:</label>
+                <span class="col-lg-1">
+                  <input type="text" class="form-control form-control-sm" id="capM" maxlength="5"></input>
+                </span>
+              </div>
+              <div class="row">
+                <label class="control-label col-lg-2" for="comuneM">Comune:</label>
+                <span class="col-lg-6">
+                  <input type="text" class="form-control form-control-sm" id="comuneM" maxlength="50"></input>
+                </span>
+              </div>
+              <div class="row">
+                <label class="control-label col-lg-2" for="provM">Provincia:</label>
+                <span class="col-lg-1">
+                  <input type="text" class="form-control form-control-sm" id="provM" maxlength="2"></input>
+                </span>
+              </div>
+              <div class="row" id="fillerMod">
+                <label class="control-label" style="color:white">Filler</label>
+              </div>
+              <br>
+              <div class="btn-group btn-group-lg float-right bottom-right">
+                <button type="button" class="btn btn-warning" title="salva cliente" id="salvaMod"><i class="fa fa-save"></i></button>
+              </div> 
+              <br>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script src="../js/scriptGestioneCliente.js"></script>
+  </body>
+</html>

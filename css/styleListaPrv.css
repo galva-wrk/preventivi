@@ -1,0 +1,14 @@
+.row {
+  flex-wrap: nowrap !important;
+}
+.thead {
+  font-weight: bold;
+  background-color: DodgerBlue; 
+  color: white;
+}
+.info {
+  background-color: transparent;
+  color: #F2552C;
+  cursor: default !important;
+}
+/* Fine css */

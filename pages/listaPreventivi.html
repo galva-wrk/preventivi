@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <title>Preventivi</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="ico/preventivi.png" type="image/png">
+    <link rel="stylesheet" href="../css/styleListaPrv.css">
+    <link rel="stylesheet" href="../css/styleGeneral.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css">
+    <script>window.$ = window.jQuery = require('jquery');</script>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="container-fluid fixed-top testata">
+        <div class="row">
+          <h3 class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">Preventivi</h3>
+          <span class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 d-flex justify-content-end align-middle">
+            <div class="align-middle" id="esito">
+              <span id="descEsito"></span>
+            </div>
+          </span>
+        </div>
+        <div class="container-fluid">
+          <div class="row d-flex">
+            <form class="mr-auto">
+              <button type="submit" class="btn btn-sm btn-warning">Aggiorna lista</button>
+            </form>
+            <button id="filtro" type="button" class="btn btn-sm btn-outline-warning float-right" data-toggle="collapse" data-target="#filtri" title="Filtri"><i class="fa fa-filter"></i></button>
+            <span style="color:white">X</span>
+            <button id="newPrev" type="button" class="btn btn-sm btn-outline-danger float-right" title="Nuovo preventivo (Ctrl + '+')"><i class="fa fa-plus"></i> <i class="fa fa-file-text-o"></i></button>
+          </div>
+          <div class="row">
+            <div id="filtri" class="filtri collapse">
+              <br>
+              <select class="form-control form-control-sm col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2" id="selAnno"></select>
+              <select class="form-control form-control-sm col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6" id="selCli"></select>
+              <select class="form-control form-control-sm col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6" id="selOpera"></select>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="row thead">
+          <span class="col-2 col-sm-2 col-md-2 col-lg-1 col-xl-1">Num.</span>
+          <span class="col-3 col-sm-3 col-md-3 col-lg-4 col-xl-4">Cliente</span>
+          <span class="col-3 col-sm-3 col-md-3 col-lg-4 col-xl-4">Opere</span>
+          <span class="col-2 col-sm-2 col-md-2 col-lg-1 col-xl-1 text-right" title="Totale fattura">Importo</span>
+          <span class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 text-right">Operazioni</span>
+        </div>
+      </div>
+      <div id="tbody" class="dettaglio">
+      </div>
+    </div>
+    
+    <script src="../js/scriptListaPreventivi.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

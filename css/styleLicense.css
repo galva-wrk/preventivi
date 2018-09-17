@@ -1,0 +1,29 @@
+*, code {
+  color: #2E4A62 !important;
+}
+
+h3 {
+  color: black !important;
+}
+
+.credit {
+  font-size: 10px;
+}
+
+.modal-title, .modal-title span {
+  margin: 0 auto;
+  color: white !important;
+}
+
+.modal-header {
+  background: linear-gradient(#2E4A62 95%, white);
+}
+
+.modal-footer {
+  background: linear-gradient(white, #2E4A62 5%);
+}
+
+#esci {
+  color: white !important;
+}
+/* Fine css */

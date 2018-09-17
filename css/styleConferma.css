@@ -1,0 +1,15 @@
+.save {
+  background-color: #92B558;
+}
+
+.delete {
+  background-color: #DC4C46;
+}
+
+.fa-trash-o {
+  color: red;
+}
+
+.fa-floppy-o {
+  color: green;
+}

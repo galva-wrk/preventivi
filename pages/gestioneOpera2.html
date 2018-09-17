@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/styleGestOpera.css">
+    <link rel="stylesheet" href="../css/styleGeneral.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css">
+    <script>window.$ = window.jQuery = require('jquery');</script>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <h3 class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">Gestione opera</h3>
+        <span class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 d-flex justify-content-end align-middle">
+          <div class="align-middle" id="esito">
+            <span id="descEsito"></span>
+          </div>
+        </span>
+      </div>
+      <div class="card" id="nuovaOpera">
+        <div class="card-header">Nuova opera</div>
+        <div>
+          <div class="card-body">
+            <form name="opera" id="inserimento">
+              <div class="row">
+                <label class="control-label col-lg-2" for="codOperaI">Codice opera:</label>
+                <span class="col-lg-2">
+                  <span class="" id="codOperaI"></span>
+                </span>
+              </div>
+              <div class="row">
+                <label class="control-label col-lg-2" for="desBrevI">Descr. breve:</label>
+                <span class="col-lg-6">
+                  <input type="text" class="form-control form-control-sm" id="desBrevI" maxlength="50"></input>
+                </span>
+              </div>
+              <div class="row">
+                <label class="control-label col-lg-2" for="desOperaI">Descrizione:</label>
+                <span class="col-lg-10">
+                  <textarea class="form-control form-control-sm" rows="4" id="desOperaI" maxlength="2000"></textarea>
+                </span>
+              </div>
+              <div class="row">
+                <label class="control-label col-lg-2" for="importoI">Importo:</label>
+                <span class="col-lg-6">
+                  <input type="text" class="form-control form-control-sm text-right" id="importoI" placeholder="X.XXX,99"></input>
+                </span>
+                <span class="col-lg-1 text-left">
+                  <i class="fa fa-euro"></i>
+                </span>
+              </div>
+              <br>
+              <div class="btn-group btn-group-lg float-right bottom-right">
+                <button type="button" class="btn btn-warning" title="salva opera" id="insOpera"><i class="fa fa-save"></i></button>
+              </div> 
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="card" id="modificaOpera">
+        <div class="card-header">Modifica opera</div>
+        <div id="modifica">
+          <div class="card-body">
+            <form name="opera" id="modifica">
+              <div class="row">
+                <label class="control-label col-lg-2" for="codOperaM">Codice opera:</label>
+                <span class="col-lg-2">
+                  <span class="" id="codOperaM"></span>
+                </span>
+              </div>
+              <div class="row">
+                <label class="control-label col-lg-2" for="desBrevM" maxlength="50">Descr. breve:</label>
+                <span class="col-lg-6">
+                  <input type="text" class="form-control form-control-sm" id="desBrevM"></input>
+                </span>
+              </div>
+              <div class="row">
+                <label class="control-label col-lg-2" for="desOperaM">Descrizione:</label>
+                <span class="col-lg-10">
+                  <textarea class="form-control form-control-sm" rows="4" id="desOperaM" maxlength="2000"></textarea>
+                </span>
+              </div>
+              <div class="row">
+                <label class="control-label col-lg-2" for="importoM">Importo:</label>
+                <span class="col-lg-6">
+                  <input type="text" class="form-control form-control-sm text-right" id="importoM"></input>
+                </span>
+                <span class="col-lg-1 text-left">
+                  <i class="fa fa-euro"></i>
+                </span>
+              </div>
+              <br>
+              <div class="btn-group btn-group-lg float-right bottom-right">
+                <button type="button" class="btn btn-warning" title="salva opera" id="modOpera"><i class="fa fa-save"></i></button>
+              </div> 
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script src="../js/scriptGestioneOpera.js"></script>
+  </body>
+</html>

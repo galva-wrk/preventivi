@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/styleListaCli.css">
+    <link rel="stylesheet" href="../css/styleGeneral.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css">
+    <script>window.$ = window.jQuery = require('jquery');</script>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script> -->
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="container-fluid fixed-top testata">
+        <div class="row">
+          <h3 class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">Clienti</h3>
+          <span class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 d-flex justify-content-end align-middle">
+            <div class="align-middle" id="esito">
+              <span id="descEsito"></span>
+            </div>
+          </span>
+        </div>
+        <div class="container-fluid">
+          <div class="row d-flex">
+            <form class="mr-auto">
+              <button type="submit" class="btn btn-sm btn-warning">Aggiorna lista</button>
+            </form>
+            <button id="filtro" type="button" class="btn btn-sm btn-outline-warning float-right" data-toggle="collapse" data-target="#filtri" title="Filtri"><i class="fa fa-filter"></i></button>
+            <span style="color:white">X</span>
+            <button id="newCli" type="button" class="btn btn-sm btn-outline-danger float-right" title="Nuovo cliente (Ctrl + '+')"><i class="fa fa-plus"></i> <i class="fa fa-address-card-o"></i></button>
+          </div>
+          <div class="row">
+            <div id="filtri" class="filtri collapse">
+              <br>
+              <span class="btn-group">
+                <button type="button" class="btn btn-sm btn-info" id="gcFiltAll">Tutto</button>
+                <button type="button" class="btn btn-sm btn-default" id="gcFiltPriv">Privato</button>
+                <button type="button" class="btn btn-sm btn-default" id="gcFiltSoc">Società</button>
+              </span>
+              <br>
+              <br>
+              <input type="text" class="form-control form-control-sm col-lg-3" id="srchCod" placeholder="Ricerca per codice">
+              <input type="text" class="form-control form-control-sm col-lg-6" id="srchNome" placeholder="Ricerca per Nome Cognome/Ragione sociale">
+              <input type="text" class="form-control form-control-sm col-lg-6" id="srchCdFis" placeholder="Ricerca per Codice fiscale/Partita IVA">
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="row thead">
+          <span class="col-2 col-sm-2 col-md-2 col-lg-1 col-xl-1">Codice</span>
+          <span class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">Cliente</span>
+          <span class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">C.F./P.IVA</span>
+          <span class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1 text-center">Tipo</span>
+          <span class="col-1 col-sm-1 col-md-1 col-lg-2 col-xl-2 text-right">Operazioni</span>
+        </div>
+      </div>
+      <div id="tbody" class="dettaglio">
+      </div>
+      <br>
+    </div>
+
+    <script src="../js/scriptListaClienti.js"></script>
+  </body>
+</html>

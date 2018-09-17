@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/styleConferma.css">
+    <link rel="stylesheet" href="../css/styleGeneral.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css">
+    <script>window.$ = window.jQuery = require('jquery');</script>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
+  </head>
+  <body>
+    <div id="confirmOp">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">
+              <i class="fa fa-trash-o" id="icoCanc"></i><i class="fa fa-floppy-o" id="icoIns"></i>
+              <span id="modalHeader"></span>
+            </h5>
+          </div>
+          <div class="modal-body">
+            <p id="modalDesc"></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" id="annullaOp">Annulla</button>
+            <button type="button" class="btn btn-warning" id="confermaOp"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script src="../js/scriptConferma.js"></script>
+  </body>
+</html>

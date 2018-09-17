@@ -1,0 +1,20 @@
+.card-header {
+  background-color: #2E4A62 !important;
+  color: white !important;
+  font-weight: bold !important;
+}
+
+.esito-ok {
+  color: black !important;
+}
+.esito-ko {
+  color: black !important;
+}
+
+::-webkit-file-upload-button {
+  background: #B4B7BA;
+  color: #2E4A62;
+  font-weight: bold;
+  -webkit-border-radius: 5px;
+}
+/* Fine css */

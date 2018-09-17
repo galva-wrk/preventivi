@@ -1,0 +1,12 @@
+.card-header {
+  background-color: #ECDB54 !important;
+  color: black !important;
+  font-weight: bold !important;
+}
+#codOperaI, #codOperaM {
+  color: #D2691E;
+  font-weight: bold;
+}
+.textarea-sm {
+  height: 31px;
+}

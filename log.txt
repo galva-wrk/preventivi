@@ -1,0 +1,37 @@
+﻿[2018-07-25 18:27:25.957] [info] createJobsQuotes
+[2018-07-25 18:27:27.098] [info] caricaAnni
+[2018-07-25 18:27:27.101] [info] caricaAnni: SELECT DISTINCT anno FROM preventivi ORDER BY anno DESC<
+[2018-07-25 18:27:27.108] [info] caricaCliPrev
+[2018-07-25 18:27:27.118] [info] caricaCliPrev: SELECT cliente, id, tipoCli FROM clientiPreventivi_view<
+[2018-07-25 18:27:27.123] [info] caricaOperePrev
+[2018-07-25 18:27:27.136] [info] caricaOperePrev: SELECT opera, id FROM operePreventivi_view<
+[2018-07-25 18:27:27.144] [info] caricaListaPrev
+[2018-07-25 18:27:27.144] [info] caricaListaPrev: SELECT numPrev, anno, numero, cliente, daFatt, cassaGeomPerc, cassaGeom, impon, ivaPerc, iva, art15, totFatt, swRitenuta, ritenutaPerc, ritenuta, impDaCorr, dataIns, dataMod FROM preventivi where anno = 2018<
+[2018-07-25 18:27:35.450] [info] createClientsList
+[2018-07-25 18:27:37.334] [info] caricaListaCli
+[2018-07-25 18:27:37.335] [info] caricaListaCli: SELECT id, nome, cognome, ragSoc, cdFis, pIva, indirizzo, numCiv, cap, comune, provincia, tipoCli FROM clienti<
+[2018-07-25 18:27:39.112] [info] nuovoCliente
+[2018-07-25 18:27:39.113] [info] createClientManagement
+[2018-07-25 18:27:40.931] [info] getNewCli
+[2018-07-25 18:27:40.940] [info] getNewCli: SELECT max(id) as id FROM clienti<
+[2018-07-25 18:29:06.625] [info] confermaInsCli
+[2018-07-25 18:29:06.625] [info] createConfirmManagement
+[2018-07-25 18:47:40.100] [info] quit
+[2018-07-25 18:47:40.100] [info] C:\Users\galva\Documents\GitHub\preventivi-test\tmpPdf
+[2018-07-25 18:47:40.104] [info] backupDB
+[2018-07-25 18:47:40.113] [info] { esito: 'OK', descErr: 'Backup effettuato correttamente!' }
+[2018-07-25 18:47:40.163] [info] readdir
+[2018-07-25 18:47:40.164] [info] []
+[2018-07-25 18:47:40.165] [info] caricaListaParm: SELECT id, codice, descrizione, valore FROM parametri WHERE (codice LIKE '%numBackup%' OR codice LIKE '%numBackup%')<
+[2018-07-25 18:47:40.171] [info] unlink
+[2018-07-25 18:47:40.171] [info] unlink
+[2018-07-25 18:47:40.172] [info] unlink
+[2018-07-25 18:47:40.173] [info] unlink
+[2018-07-25 18:47:40.173] [info] unlink
+[2018-07-25 18:47:40.174] [info] unlink
+[2018-07-25 18:47:40.176] [info] unlink
+[2018-07-25 18:47:40.176] [info] unlink
+[2018-07-25 18:47:40.177] [info] unlink
+[2018-07-25 18:47:40.178] [info] unlink
+[2018-07-25 18:47:40.178] [info] unlink
+[2018-07-25 18:47:40.179] [info] unlink

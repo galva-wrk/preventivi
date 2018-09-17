@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/stylePdf.css">
+    <link rel="stylesheet" href="../css/styleGeneral.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css">
+    <script>window.$ = window.jQuery = require('jquery');</script>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
+  </head>
+  <body>
+    <div id="header" style="A_CSS_ATTRIBUTE:all;position: fixed;top: 0; left: 0;" class="container">
+      <div class="row">
+        <span class="col-1">
+          <img id="logo">
+        </span>
+        <span id="descr" class="col-10">
+          <h4 id="soc"></h4>
+        </span>
+        <span class="col-1"></span>
+      </div>
+    </div>
+    <div id="footer" style="A_CSS_ATTRIBUTE:all;position: fixed;bottom: 0; left: 0;width: 21cm !important" class="container">
+      <div id="row1" class="row">
+        <span id="indir"></span>&nbsp;-&nbsp;Tel.&nbsp;<span id="tel"></span>&nbsp;-&nbsp;Fax&nbsp;<span id="fax"></span>
+      </div>
+      <div id="row2" class="row">
+        P.IVA&nbsp;<span id="piva"></span>&nbsp;-&nbsp;e-mail:&nbsp;<span id="email"></span>&nbsp;-&nbsp;sito&nbsp;web:&nbsp;<span id="sito"></span>
+      </div>
+    </div>
+    <div class="container border" id="container2">
+      <div class="container">
+        <div id="preview">
+        </div>
+      </div>
+    </div>
+    <div class="container d-flex flex-row-reverse bottom-right-fix">
+      <button class="btn btn-danger" type="button" name="button" title="Crea pdf" id="creaPdf"><i class="fa fa-file-pdf-o"></i></button>
+    </div>
+    <script id="jsScript" src="../js/scriptPdf.js"></script>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+.card-header {
+  background-color: #E94B3C !important;
+  color: white !important;
+  font-weight: bold !important;
+}
+#idI, #idM {
+  color: #D2691E;
+  font-weight: bold;
+}
+/* Fine css */

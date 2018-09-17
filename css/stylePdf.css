@@ -1,0 +1,97 @@
+@page {
+  size: A4;
+  margin: 11mm 17mm 17mm 17mm;
+}
+
+@media print {
+  .white {
+    color: white !important;
+  }
+  
+  @media print and (-webkit-min-device-pixel-ratio:0) {
+    .white {
+      color: white !important;
+      -webkit-print-color-adjust: exact;
+    }
+  }
+}
+
+h1 { 
+  padding-top: 5px !important;
+}
+
+h4 { 
+  text-transform: uppercase;
+}
+
+.white {
+  color: #F8F8FF !important;
+}
+
+.page {
+  width: 21cm;
+  height: 29.7cm; 
+}
+
+.page-break {
+  page-break-before: always;
+  padding-top: 90px;
+}
+
+.word-wrap {
+  word-wrap: break-word;
+}
+
+#opere {
+  width: 100% !important;
+}
+
+#stampa {
+  padding-bottom: 50px;
+}
+
+#container2 {
+  padding-top: 75px;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.bold-500 {
+  font-weight: 500;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.border {
+  border: 1px solid gainsboro;
+  border-radius: 5px;
+}
+
+.bottom-right-imp {
+  position:absolute !important;
+  bottom:0px !important;
+  right: 15px !important;
+}
+
+.linea {
+  border-bottom: 1px solid black;
+}
+
+.linea-grey {
+  border-bottom: 1px solid #cccccc;
+  padding-top: 2px !important;
+  padding-bottom: 2px !important;
+}
+
+#banca {
+  padding-left: 50px;
+}
+/* Fine css */

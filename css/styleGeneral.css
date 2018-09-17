@@ -1,0 +1,93 @@
+.fa-paypal {
+  color: #003087 !important;
+  background-color: transparent;
+}
+
+.filtri {
+  width: 100%;
+}
+.form-control:focus {
+  color: SlateBlue !important;
+}
+.form-control::-webkit-input-placeholder {
+  font-weight: normal;
+}
+.societa {
+  color: DodgerBlue !important;
+}
+.privato {
+  color: orange !important;
+}
+.form-control {
+  font-weight: bold;
+}
+.testata {
+  background-color: white;
+}
+.dettaglio {
+  padding-top: 145px;
+}
+.errore {
+  background-color: #ffcccc !important;
+}
+.esito-ok {
+  background-color: #d4edda;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 15px;
+}
+.esito-ko {
+  background-color: #f8d7da;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 15px;
+}
+.button-new {
+  padding: 10px !important;
+  font-size: 16px;
+  margin: 4px 2px !important;
+  -webkit-appearance: none !important; 
+}
+.bottom-right {
+  position:absolute !important;
+  bottom:5px;
+  right:25px;
+  margin:0;
+  padding:5px 3px;
+  border-radius: 5px;
+}
+.bottom-right-fix {
+  position:fixed !important;
+  bottom:5px;
+  right:25px;
+  margin:0;
+  padding:5px 3px;
+  border-radius: 5px;
+}
+.bottom {
+  position:absolute !important;
+  bottom:0px;
+}
+.button-top {
+  position:absolute !important;
+  top:5px;
+  /* right:25px; */
+  margin:0;
+  padding:5px 3px;
+  border-radius: 5px;
+}
+.tbody-gray {
+  background-color: #F9F9F9; 
+}
+.tbody:hover, .tbody-gray:hover {
+  background-color: lightgray; 
+}
+.thead {
+  font-size: 1em;
+}
+.thead , .tbody , .tbody-gray {
+  padding: .75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+/* Fine css

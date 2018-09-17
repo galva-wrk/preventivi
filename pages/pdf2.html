@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/stylePdf.css">
+    <link rel="stylesheet" href="../css/styleGeneral.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css">
+    <script>window.$ = window.jQuery = require('jquery');</script>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
+  </head>
+  <body>
+    <div id="stampa">
+      <div class="container border">
+        <div class="row">
+          <span class="col-1" id="logo"></span>
+          <span class="col-10 d-flex justify-content-center">
+            <h4 class="align-self-center">STUDIO TECNICO ASSOCIATO BINDELLA & STOPPELE</h4>
+          </span>
+          <span class="col-1"></span>
+        </div>
+        <br>
+        <div class="row">
+          <span class="col">
+            <h1>PREVENTIVO</h1>
+          </span>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-6">
+            <div class="row">
+              <label class="col-3" for="progressivo">Progressivo N° </label>
+              <output class="col bold" name="progressivo" id="progressivo">2018-1</output>
+            </div>
+            <div class="row">
+              <label class="col-3" name="luogo" id="luogo">Mozzecane</label>
+              <output class="col bold" name="data" id="data">2018/01/01</output>
+            </div>
+            <div class="row">
+              <label class="col-3" for="codfisc">Codice fiscale </label>
+              <output class="col bold" name="codfisc" id="cdfis">GLVDVD87L14L949T</output>
+            </div>
+            <div class="row">
+              <label class="col-3" for="piva">Partita IVA </label>
+              <output class="col bold" name="piva" id="piva"></output>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="row">
+              <label>Spett. </label>
+            </div>
+            <div class="row">
+              <label class="bold" id="cliente"></label>
+            </div>
+            <div class="row">
+              <label class="bold" id="indirizzo"></label>
+            </div>
+            <div class="row">
+              <label class="bold" id="indirizzo2"></label>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="row linea"></div>
+        <div class="row">
+          <div id="opere">
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="container" id="totali">
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="container" id="banca">
+            <div class="row col italic">
+              <span>In caso di Bonifico Bancario:</span>
+            </div>
+            <div class="row col italic">
+              <span>Coordinate Bancarie Italiane</span>
+            </div>
+            <div class="row col">
+              <span id="coord"></span>
+            </div>
+            <div class="row col">
+              IBAN: <span id="iban"></span>
+            </div>
+          </div>
+        </div>
+        <br>
+        <footer>
+          <div class="row col d-flex justify-content-center">
+            <span id="indir"></span>&nbsp;- Tel.&nbsp;<span id="tel"></span>&nbsp;-&nbsp;<span id="fax"></span>
+          </div>
+          <div class="row col d-flex justify-content-center">
+            P.IVA&nbsp;<span id="pivaStudio"></span>&nbsp;- e-mail:&nbsp;<u id="mail"></u>&nbsp;- sito web:&nbsp;<u id="sito"></u>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <div class="container d-flex flex-row-reverse">
+      <button class="btn btn-danger noprint" type="button" name="button" title="Crea pdf" id="creaPdf"><i class="fa fa-file-pdf-o"></i></button>
+    </div>
+    <script src="../js/scriptPdf.js"></script>
+  </body>
+</html>

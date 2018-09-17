@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/styleBackup.css">
+    <link rel="stylesheet" href="../css/styleGeneral.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css">
+    <script>window.$ = window.jQuery = require('jquery');</script>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <br>
+      <div class="card" id="nuovoCli">
+        <div class="card-header">
+          <div class="row">
+            <h3 class="col-5">Backup database</h3>
+            <div class="col-7" id="esito">
+              <span id="descEsito"></span>
+            </div>
+          </div>
+        </div>
+        <form class="card-body" name="backup" id="backup">
+          <div class="row">
+            Seleziona la directory nella quale salvare il backup del database 
+            <br>
+            <br>
+            <input type="file" name="fileBackup" class="form-control-file" id="fileBackup" webkitdirectory directory></input>
+          </div>
+          <div class="btn-group btn-group-lg float-right bottom-right">
+            <button id="salvaBackup" type="button" class="btn btn-warning" title="Salva" ><i class="fa fa-save"></i></button>
+          </div> 
+        </form>
+      </div>
+    </div>
+    
+    <script src="../js/scriptBackup.js"></script>
+  </body>
+</html>

@@ -1,30 +1,34 @@
 {
   "name": "preventivi",
   "version": "1.0.0",
-  "description": "Preventivi studio tecnico",
+  "description": "app di generazione prenventivi",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "build": "electron-packager . --asar"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/galva-wrk/preventivi.git"
+    "build": "electron-packager . Preventivi --overwrite --platform=win32 --arch=x64 --prune=true --out=APP --icon=ico/sketch2.ico",
+    "rebuild": "electron-rebuild -f -w better-sqlite3"
   },
   "author": "Davide Galvani",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/galva-wrk/preventivi/issues"
-  },
-  "homepage": "https://github.com/galva-wrk/preventivi#readme",
-  "devDependencies": {
-    "electron": "^1.8.2"
-  },
+  "license": "MIT",
   "dependencies": {
-    "bootstrap": "^4.0.0",
-    "electron-packager": "^11.1.0",
+    "better-sqlite3": "^4.1.0",
+    "bootstrap": "^4.1.1",
+    "chart.js": "^2.7.2",
+    "date-and-time": "^0.6.2",
+    "electron-log": "^2.2.14",
+    "electron-open-link-in-browser": "^1.0.2",
     "font-awesome": "^4.7.0",
+    "fs-extra": "^6.0.1",
+    "integer": "^1.0.5",
     "jquery": "^3.3.1",
-    "less": "^3.0.1"
+    "lzz-gyp": "^0.4.2",
+    "mkdirp": "^0.5.1",
+    "popper.js": "^1.14.3",
+    "shell": "^0.5.0"
+  },
+  "devDependencies": {
+    "electron": "2.0.8",
+    "electron-packager": "^12.1.1",
+    "electron-rebuild": "^1.7.3"
   }
 }

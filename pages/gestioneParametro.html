@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/styleGestPar.css">
+    <link rel="stylesheet" href="../css/styleGeneral.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css">
+    <script>window.$ = window.jQuery = require('jquery');</script>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script> -->
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <h3 class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">Gestione parametro</h3>
+        <span class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 d-flex justify-content-end align-middle">
+          <div class="align-middle" id="esito">
+            <span id="descEsito"></span>
+          </div>
+        </span>
+      </div>
+      <div class="card" id="nuovoParm">
+        <div class="card-header">Nuovo parametro</div>
+        <div>
+          <div class="card-body">
+            <form name="parametro" id="inserimento">
+              <div hidden>
+                <input type="text" class="form-control" id="idI"></input>
+              </div>
+              <div class="row">
+                <label class="control-label col-lg-2" for="codParmI">Parametro:</label>
+                <span class="col-lg-2">
+                  <input type="text" class="form-control" id="codParmI" placeholder="Parametro" maxlength="10"></input>
+                </span>
+              </div>
+              <br>
+              <div class="row">
+                <label class="control-label col-lg-2" for="desParmI">Descrizione:</label>
+                <span class="col-lg-7">
+                  <input type="text" class="form-control" id="desParmI" placeholder="Descrizione parametro" maxlength="50"></input>
+                </span>
+              </div>
+              <br>
+              <div class="row">
+                <label class="control-label col-lg-2" for="valoreI">Valore:</label>
+                <span class="col-lg-7">
+                  <textarea  class="form-control" id="valoreI" placeholder="Valore" maxlength="200"></textarea >
+                </span>
+              </div>
+              <br>
+              <div class="btn-group btn-group-lg float-right bottom-right">
+                <button id="insParametro" type="button" class="btn btn-warning" title="salva parametro" ><i class="fa fa-save"></i></button>
+              </div> 
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="card" id="modificaParm">
+        <div class="card-header">Modifica parametro</div>
+        <div id="modifica">
+          <div class="card-body">
+            <form name="parametro" id="modifica">
+              <div hidden>
+                <input type="text" class="form-control" id="idM"></input>
+              </div>
+              <div class="row">
+                <label class="control-label col-lg-2" for="codParmM">Parametro:</label>
+                <span class="col-lg-2">
+                  <input type="text" class="form-control" id="codParmM" placeholder="Parametro" maxlength="10"></input>
+                </span>
+              </div>
+              <br>
+              <div class="row">
+                <label class="control-label col-lg-2" for="desParmM">Descrizione:</label>
+                <span class="col-lg-7">
+                  <input type="text" class="form-control" id="desParmM" placeholder="Descrizione parametro" maxlength="50"></input>
+                </span>
+              </div>
+              <br>
+              <div class="row">
+                <label class="control-label col-lg-2" for="valoreM">Valore:</label>
+                <span class="col-lg-7">
+                  <textarea class="form-control" id="valoreM" placeholder="Valore" maxlength="200"></textarea >
+                </span>
+              </div>
+              <br>
+              <div class="btn-group btn-group-lg float-right bottom-right">
+                <button id="modParametro" type="button" class="btn btn-warning" title="salva parametro"><i class="fa fa-save"></i></button>
+              </div> 
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script src="../js/scriptGestioneParametro.js"></script>
+  </body>
+</html>

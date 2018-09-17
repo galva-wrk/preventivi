@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/styleGeneral.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css">
+    <script>window.$ = window.jQuery = require('jquery');</script>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script> -->
+  </head>
+  <body>
+    <div>
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">
+              <span id="modalHeader">Scorciatoie da tastiera</span>
+            </h5>
+          </div>
+          <div class="modal-body table-responsive">
+            <table class="table">
+              <thead class="thead-light">
+                <tr>
+                  <th>Funzione</th>
+                  <th class="text-center"><i class="fa fa-windows" title="Windows"></i> <i class="fa fa-linux" title="Linux"></i></th>
+                  <th class="text-center"><i class="fa fa-apple" title="MacOs"></i></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Gestione clienti</td>
+                  <td class="text-center"><kbd>Ctrl + B</kbd></td>
+                  <td class="text-center"><kbd>Command + B</kbd></td>
+                </tr>
+                <tr>
+                  <td>Gestione opere</td>
+                  <td class="text-center"><kbd>Ctrl + O</kbd></td>
+                  <td class="text-center"><kbd>Command + O</kbd></td>
+                </tr>
+                <tr>
+                  <td>Gestione parametri</td>
+                  <td class="text-center"><kbd>Ctrl + P</kbd></td>
+                  <td class="text-center"><kbd>Command + P</kbd></td>
+                </tr>
+                <tr>
+                  <td>Gestione scorciatoie</td>
+                  <td class="text-center"><kbd>Ctrl + S</kbd></td>
+                  <td class="text-center"><kbd>Command + S</kbd></td>
+                </tr>
+                <tr>
+                  <td>Statistiche</td>
+                  <td class="text-center"><kbd>Ctrl+Alt+S</kbd></td>
+                  <td class="text-center"><kbd>Command+Alt+S</kbd></td>
+                </tr>
+                <tr>
+                  <td>Chiusura schermata</td>
+                  <td class="text-center"><kbd>Alt + F4</kbd></td>
+                  <td class="text-center"><kbd>Command + W</kbd></td>
+                </tr>
+                <tr>
+                  <td>Chiusura app</td>
+                  <td class="text-center"><kbd>Ctrl + Q</kbd></td>
+                  <td class="text-center"><kbd>Command + Q</kbd></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger fa fa-times" id="esci"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script src="../js/scriptShortcuts.js"></script>
+  </body>
+</html>

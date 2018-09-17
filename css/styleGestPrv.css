@@ -1,0 +1,66 @@
+.modal-dialog{
+  overflow-y: initial !important
+}
+.modal-scroll{
+  height: 50vh;
+  overflow-y: auto;
+}
+.rowSel {
+  cursor: pointer;
+}
+.row {
+  margin: 0px !important;
+}
+.noSpace {
+  margin: 0px !important;
+}
+.card-header {
+  background-color: DodgerBlue !important;
+  color: white !important;
+  font-weight: bold !important;
+}
+#modalCliente .modal-header {
+  background-color: #E94B3C !important;
+  color: white !important;
+  font-weight: bold !important;
+}
+#modalCliente .thead {
+  font-weight: bold;
+  background-color: #e6e6e6;
+  color: #E94B3C;
+  border-top: 0px !important;
+}
+#modalOpera .modal-header {
+  background-color: #ECDB54 !important;
+  color: white !important;
+  font-weight: bold !important;
+}
+#modalOpera .thead {
+  font-weight: bold;
+  background-color: #e6e6e6;
+  color: GoldenRod ;
+  border-top: 0px !important;
+}
+.thead {
+  font-weight: bold;
+  background-color: #e6e6e6;
+  color: DodgerBlue;
+  border-top: 0px !important;
+}
+#desCliI, #desCliM {
+  background-color: #e6e6e6;
+  color: black;
+  font-weight: bold;
+  border: 0px;
+}
+#idI, #idM, #dataInsI, #dataInsM, #dataModsM {
+  color: #D2691E;
+  font-weight: bold;
+}
+label {
+  font-weight: 600;
+}
+i {
+  color: white !important;
+}
+/* Fine css */

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/styleListaOpere.css">
+    <link rel="stylesheet" href="../css/styleGeneral.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css">
+    <script>window.$ = window.jQuery = require('jquery');</script>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script> -->
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="container-fluid fixed-top testata">
+        <div class="row">
+          <h3 class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">Opere</h3>
+          <span class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 d-flex justify-content-end align-middle">
+            <div class="align-middle" id="esito">
+              <span id="descEsito"></span>
+            </div>
+          </span>
+        </div>
+        <div class="container-fluid">
+          <div class="row d-flex">
+            <form class="mr-auto">
+              <button type="submit" class="btn btn-sm btn-warning">Aggiorna lista</button>
+            </form>
+            <button id="filtro" type="button" class="btn btn-sm btn-outline-warning float-right" data-toggle="collapse" data-target="#filtri" title="Filtri"><i class="fa fa-filter"></i></button>
+            <span style="color:white">X</span>
+            <button id="newOpera" type="button" class="btn btn-sm btn-outline-danger float-right" title="Nuova opera (Ctrl + '+')"><i class="fa fa-plus"></i> <i class="fa fa-wrench"></i></button>
+          </div>
+          <div class="row">
+            <div id="filtri" class="filtri collapse">
+              <br>
+              <input type="text" class="form-control form-control-sm col-lg-4" id="srchDesc" placeholder="Ricerca per descrizione">
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="row thead">
+          <span class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1">Cod.</span>
+          <span class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">Desc.</span>
+          <span class="col-5 col-sm-5 col-md-5 col-lg-5 col-xl-5">Descrizione</span>
+          <span class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 text-right">Importo</span>
+          <span class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 text-right">Operazioni</span>
+        </div>
+      </div>
+      <div id="tbody" class="dettaglio">
+      </div>
+    </div>
+    <script src="../js/scriptListaOpere.js"></script>
+  </body>
+</html>
